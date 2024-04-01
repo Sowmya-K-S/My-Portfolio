@@ -7,6 +7,9 @@
     <!-- style sheet linkage -->
     <link rel="stylesheet" href="./style.css">
 
+    <link rel="stylesheet" href="aos-master/aos-master/dist/aos.css">
+
+
     <title>Sowmya's Portfolio </title>
 
     <!-- fonts -->
@@ -14,8 +17,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/icon.png" />
+
+
     <!-- Font awesome icon -->
     <script src="https://kit.fontawesome.com/87f7aa2b39.js" crossorigin="anonymous"></script>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -28,13 +39,13 @@
 
         <div class="navbar"> 
             <ul>
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Education</li> </a>
-            <a href="#"><li>Skills</li></a>
-            <a href="#"><li>Certificates</li></a>
-            <a href="#"><li>Projects</li></a>
-            <a href="#"><li>Contact me</li></a>
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#main-education"><li>Education</li> </a>
+            <a href="#skill-section"><li>Skills</li></a>
+            <a href="#certi"><li>Certificates</li></a>
+            <a href="#proj"><li>Projects</li></a>
+            <a href="#contact"><li>Contact me</li></a>
             </ul> 
         </div>
 
@@ -42,11 +53,43 @@
     <!-- Top logo and Navigation bar -->
 
 
+    <!-- home -->
+    <div class="home targetsection" id="home">
+
+        <div class="hello"><h1>Hello there!</h1></div>
+
+        <div class="type-write">
+
+            <div><span>I'm</span></div>
+
+            <div>
+                <div class="type-text">Sowmya</div>
+                <div class="type-text"><span style="color: white;">a</span> Student</div>
+                <div class="type-text"><span style="color: white;">a</span> MERN Stack Web developer</div>
+                <div class="type-text"><span style="color: white;">a</span> Machine Learning Enthusiast</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="#contact"><button>Let's collaborate</button></a>
+            <a href="https://drive.google.com/file/d/1XO6r4CqRdVuaJGtYbJ8Q7NaHuy3lq2Ea/view?usp=sharing" target="_blank"><button>My Resume</button></a>
+        </div>
+
+        <div class="soc-handles">
+            <div><a href="https://www.linkedin.com/in/sowmya-k-s-0b19b6256/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+            <div><a href="https://github.com/Sowmya-K-S" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+            <div ><a href="https://www.instagram.com/livelong__learning__/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+            <div ><a href="https://twitter.com/sowmya68380" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>    
+        </div>
+
+    </div>
+    <!-- home -->
+
 
     <!-- About section with photo -->
-    <div class="about">
+    <div class="about targetsection" id="about">
 
-        <div><h1>About Me</h1></div>
+        <div class="target"><h1>About Me</h1></div>
 
         <div class="aboutme">
 
@@ -64,9 +107,9 @@
 
 
     <!-- Education -->
-    <div class="main-education">
+    <div class="main-education targetsection" id="main-education">
 
-        <div><h1>Education</h1></div>
+        <div class="target"><h1>Education</h1></div>
 
         <div class="edubox">
             <div>
@@ -103,9 +146,9 @@
 
 
     <!-- Skills -->
-    <div class="skill-section">
+    <div class="skill-section targetsection" id="skill-section">
 
-        <div><h1>Skills</h1></div>
+        <div class="target"><h1>Skills</h1></div>
 
         <div class="skill-icons">
             
@@ -149,9 +192,9 @@
 
 
     <!-- Certificates -->
-    <div class="certi">
+    <div class="certi targetsection" id="certi">
 
-        <div><h1>Certificates</h1></div>
+        <div class="target"><h1>Certificates</h1></div>
 
         <div class="certifs">
 
@@ -165,9 +208,9 @@
 
 
      <!-- projects -->
-     <div class="proj">
+     <div class="proj targetsection" id="proj">
 
-        <div><h1>Projects</h1></div>
+        <div class="target"><h1>Projects</h1></div>
 
         <div class="projs">
 
@@ -185,10 +228,9 @@
 
 
     <!-- contact form -->
+    <div class="contact targetsection" id="contact">
 
-    <div class="contact">
-
-        <div><h1>Contact Me</h1></div>
+        <div class="target"><h1>Contact Me</h1></div>
 
         <div class="contact-form">
             <form action="">
@@ -212,15 +254,55 @@
      <!-- contact form -->
 
 
-     
-     <!-- footer -->
+     <!-- up button -->
     
+        <div class="up-button"onclick="goToTop()" id="goToTopBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+   
+     <!-- up button -->
+
 
      <!-- footer -->
+        <div class="foot">
 
-    <br><br><br>
+            <div class="quote-line"><span>Embracing the journey to become non-fungible</span></div>
+
+            <div>
+                <div class="nav-links">
+                    <div><a href="#home">Home</a></div>
+                    <div><a href="#about">About</a></div>
+                    <div><a href="#proj">Projects</a></div>
+                    <div><a href="#contact">Contact</a></div>  
+                </div>
+                <div class="copyright">
+                    <span> &copy; 2024 designed with dedication by Sowmya</span>
+                </div>
+            </div>
+            
+        
+            <div>
+                <div class="social-links">
+                    <div class="soc-icon"><a href="https://www.linkedin.com/in/sowmya-k-s-0b19b6256/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                    <div class="soc-icon"><a href="https://github.com/Sowmya-K-S" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                    <div class="soc-icon"><a href="https://www.instagram.com/livelong__learning__/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div class="soc-icon"><a href="https://twitter.com/sowmya68380" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>    
+                </div>
+                <div class="email">
+                    <a href="mailto:sowmya68380@gmail.com"><span>sowmya68380@gmail.com</span></a>
+                </div>
+            </div>
+            
+        </div>
+     <!-- footer -->
 
 
+
+
+    <!-- JS Linkage -->
+    <script src="./script.js"></script>
+
+    <script src="aos-master/aos-master/dist/aos.js"></script>
 
 </body>
 </html>

@@ -1,12 +1,16 @@
+html
+{
+    scroll-behavior: smooth;
+    margin-top: 70px;
+}
+
 body
 {
     background-color:#050505;
     color:white;
     font-family: poppins;
-    scroll-behavior: smooth;
-    margin-top: 70px;
     height:100vh;
-  
+    
 }
 
 *
@@ -63,7 +67,7 @@ p
     position: relative;
 }
 
-.top > .logo > a
+.logo > a
 {
     text-decoration: none;
     /* color:#00bf03; */
@@ -113,6 +117,111 @@ p
 /* Top logo and Navigation bar */
 
 
+
+/* Home section */
+
+.home
+{
+    width:80%;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border:solid white 2px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap:35px;
+}
+
+.hello
+{
+    /* border:solid white 2px; */
+    font-size: 25px;
+    width:43%;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+}
+
+.type-write
+{
+    display: flex;
+    justify-content: end;
+    /* border:solid white 2px; */
+    gap:30px;
+    width:100%;
+}
+
+.type-write span
+{
+    font-size: 50px;
+}
+
+.type-text
+{
+    font-size: 50px;
+    color:yellow;
+}
+
+
+.buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* border:solid #ffffff 2px; */
+    gap:30px;
+    width:43%;
+  
+}
+.buttons button
+{
+    height: 50px;
+    width:150px;
+    background-color: transparent;
+    color:white;
+    border:2px solid white;
+    font-size: 16px;
+    border-radius: 8px;
+    font-family: poppins;
+    gap:80px;
+    transition: transform 0.3s ease;
+}
+.buttons button:hover
+{
+        transform: scale(1.1);
+        background-color:yellow;
+        color:black;
+        font-weight: 700;
+        border:none;
+}
+.soc-handles
+{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* border:solid #ffffff 2px; */
+    gap:30px;
+    width:37%;
+  
+}
+.soc-handles i
+{
+    font-size: 38px;
+    text-decoration: none;
+    color:white;
+    transition: transform 0.3s ease;
+}
+
+.soc-handles i:hover
+{
+    transform: scale(1.1);
+    color:yellow;
+}
+
+/* Home section */
+
 /* About section with photo */
 
 .about
@@ -122,8 +231,8 @@ p
     align-items: center;
     justify-content: space-between;
     gap:20px;
-    min-height: 400px;
-    width: 70%;
+    min-height: 500px;
+    width: 80%;
     border: solid white 2px;
     border-radius: 20px;
     box-shadow:10px 10px 8px white ;
@@ -399,11 +508,11 @@ p
 {
     display: flex;
     align-items: center;
-    justify-content: start;
+   
     flex-direction: column;
     gap:20px;
     width: 50%;
-    height:800px;
+    height:700px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 300px;
@@ -416,10 +525,9 @@ p
     
     width:90%;
     border:white solid 2px;
-    height: 60%;
     border-radius: 8px;
     margin-top: 20px;
-    box-shadow:10px 10px 14px ;
+    box-shadow:10px 10px 14px ;80
 }
 
 .contact-form > form
@@ -451,6 +559,7 @@ input
     font-size: 16px;
     color: white;
     font-family: poppins;
+    padding:15px;
 }
 
 .text
@@ -474,6 +583,10 @@ textarea
     font-size: 16px;
     color:white;
     font-family: poppins;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+    resize: none;
+    padding:15px;
 }
 
 
@@ -485,7 +598,7 @@ textarea
     align-items: center;
     justify-content: center;
 }
-button
+.btn>button
 {
     height: 45px;
     width:130px;
@@ -499,3 +612,100 @@ button
 
 /* Contact form */
 
+
+
+/* Up button */
+
+.up-button
+{
+    position:fixed;
+    right: 10px;
+    bottom:10px;
+    width:45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    color:black;
+    font-size: 25px;
+}
+
+.up-button i
+{
+    line-height: 45px;
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Up button */
+
+
+
+/* footer */
+
+.foot
+{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height:100px;
+    background-color:#101015;
+}
+
+.quote-line>span
+{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    
+}
+
+.nav-links a
+{
+    color:white;
+    font-size: 14px;
+    text-decoration: none;
+    
+}
+
+.copyright>span
+{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.social-links
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.soc-icon>a>i
+{
+    font-size: 25px;
+    color:white;
+}
+
+
+.email>a
+{
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* footer */
