@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Sowmya's Portfolio </title>
+
     <!-- style sheet linkage -->
     <link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="aos-master/aos-master/dist/aos.css">
+    <!-- typejs CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-
-    <title>Sowmya's Portfolio </title>
+    <!-- AOS Style Sheet -->
+   
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,21 +57,16 @@
 
 
     <!-- home -->
-    <div class="home targetsection" id="home">
+    <div class="home targetsection" id="home" >
 
         <div class="hello"><h1>Hello there!</h1></div>
 
+    
         <div class="type-write">
-
-            <div><span>I'm</span></div>
-
-            <div>
-                <div class="type-text">Sowmya</div>
-                <div class="type-text"><span style="color: white;">a</span> Student</div>
-                <div class="type-text"><span style="color: white;">a</span> MERN Stack Web developer</div>
-                <div class="type-text"><span style="color: white;">a</span> Machine Learning Enthusiast</div>
-            </div>
+            <div class="static"><span>I'm</span></div>
+            <div class="dynamic"><span id="element"></span></div>
         </div>
+
 
         <div class="buttons">
             <a href="#contact"><button>Let's collaborate</button></a>
@@ -220,7 +218,7 @@
 
             <a href="https://github.com/Sowmya-K-S/Tic_Tac_Toe" target="_blank"><div> <h3>Tic-Tac-Toe</h3> </div></a>
 
-            <a href="https://github.com/Sowmya-K-S/WebInnovators_WebSculpt" target="_blank"><div> <h3>Weather Website</h3> </div></a>
+            <a href="https://github.com/Sowmya-K-S/Weather-Website" target="_blank"><div> <h3>Weather Website</h3> </div></a>
 
         </div>
     </div>
@@ -255,11 +253,9 @@
 
 
      <!-- up button -->
-    
         <div class="up-button"onclick="goToTop()" id="goToTopBtn">
             <i class="fa-solid fa-arrow-up"></i>
         </div>
-   
      <!-- up button -->
 
 
@@ -298,11 +294,13 @@
 
 
 
-
     <!-- JS Linkage -->
     <script src="./script.js"></script>
 
-    <script src="aos-master/aos-master/dist/aos.js"></script>
+    <!-- AOS JS -->
+    
+    
+    
 
 </body>
 </html>

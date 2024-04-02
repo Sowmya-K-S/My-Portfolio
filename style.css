@@ -123,34 +123,38 @@ p
 .home
 {
     width:80%;
-    margin-top: 130px;
+    margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
-    /* border:solid white 2px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     gap:35px;
+
+    /* border:solid white 2px; */
 }
 
 .hello
 {
-    /* border:solid white 2px; */
     font-size: 25px;
-    width:43%;
+    width:50%;
     display: flex;
     align-items: center;
-    justify-content:start;
+    justify-content:center;
+
+    /* border:solid white 2px; */
 }
 
 .type-write
 {
     display: flex;
-    justify-content: end;
-    /* border:solid white 2px; */
-    gap:30px;
+    justify-content:center;
     width:100%;
+    gap:25px;
+
+    /* border:solid white 2px; */
+   
 }
 
 .type-write span
@@ -164,15 +168,35 @@ p
     color:yellow;
 }
 
+.static
+{
+    /* border:solid white 2px; */
+    margin-left:100px;
+}
+
+.dynamic
+{
+    width:420px;
+    color: yellow;
+    text-shadow: 5px 5px 12px yellow;
+   /* border:solid white 2px; */
+}
+
+.element
+{
+    
+}
+/* class styles for adding glow to text */
 
 .buttons
 {
     display: flex;
     align-items: center;
-    justify-content: start;
-    /* border:solid #ffffff 2px; */
+    justify-content: center;
     gap:30px;
-    width:43%;
+    width:50%;
+
+     /* border:solid #ffffff 2px; */
   
 }
 .buttons button
@@ -200,11 +224,10 @@ p
 {
     display: flex;
     align-items: center;
-    justify-content: start;
-    /* border:solid #ffffff 2px; */
+    justify-content: center;
     gap:30px;
-    width:37%;
-  
+    width:50%;
+    /* border:solid #ffffff 2px; */
 }
 .soc-handles i
 {
@@ -236,7 +259,7 @@ p
     border: solid white 2px;
     border-radius: 20px;
     box-shadow:10px 10px 8px white ;
-    margin-top: 150px;
+    margin-top: 300px;
     margin-left: auto;
     margin-right: auto;
   
@@ -283,7 +306,7 @@ p
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top:300px;
+    margin-top: 300px;
    
 }
 

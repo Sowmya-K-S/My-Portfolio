@@ -34,3 +34,15 @@ function goToTop() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// Function from typejs
+var typed = new Typed('#element', {
+  strings: ['Sowmya', 'Student', 'Web-Developer', 'ML-Enthusiast','Tech-curious','Passionate'],
+  typeSpeed: 30,
+  backSpeed: 20,
+  loop: true,
+});
+
+
+//function for glowing text
