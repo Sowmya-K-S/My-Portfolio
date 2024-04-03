@@ -22,9 +22,10 @@ body
 
 p
 {
-    line-height: 29px;
-    letter-spacing: 0.3px;
-    word-spacing: 4px;
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    word-spacing: 6px;
+    font-size: 17px;
 }
 
 /* Top logo and Navigation bar */
@@ -41,7 +42,7 @@ p
     position:fixed;
     top:0px;
     font-size: 17px;
-   
+    z-index:2;
     
 }
 
@@ -57,7 +58,6 @@ p
     display:flex;
     flex-direction:row;
     align-items: center;
-    /* justify-content:space-between; */
     gap:30px;
 }
 .navbar > ul > a
@@ -70,10 +70,8 @@ p
 .logo > a
 {
     text-decoration: none;
-    /* color:#00bf03; */
     font-weight: 700;
     font-size: 30px;
-
     background: linear-gradient(-90deg, gold 0%, yellow 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -122,82 +120,100 @@ p
 
 .home
 {
-    width:80%;
+    width:100%;
     margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    gap:35px;
+    justify-content: space-around;
+    flex-direction: row;
+   
+    
+}
 
-    /* border:solid white 2px; */
+.content
+{
+    width:40%;
+    
+
+    display: flex;
+    padding-left: 200px;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+}
+.photo
+{
+    width:35%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.photo>img
+{
+    height: 400px;
 }
 
 .hello
 {
-    font-size: 25px;
-    width:50%;
+    font-size: 10px;
     display: flex;
     align-items: center;
-    justify-content:center;
-
-    /* border:solid white 2px; */
+    justify-content:start;
+   
+}
+.myname
+{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    
 }
 
 .type-write
 {
     display: flex;
-    justify-content:center;
-    width:100%;
-    gap:25px;
-
-    /* border:solid white 2px; */
+    justify-content:start;
+    gap:10px;
    
 }
 
 .type-write span
 {
-    font-size: 50px;
+    font-size: 20px;
+    
 }
 
-.type-text
-{
-    font-size: 50px;
-    color:yellow;
-}
+
 
 .static
 {
-    /* border:solid white 2px; */
-    margin-left:100px;
+    font-weight: 700;
+    
 }
 
 .dynamic
 {
-    width:420px;
+    width:350px;
     color: yellow;
-    text-shadow: 5px 5px 12px yellow;
-   /* border:solid white 2px; */
-}
-
-.element
-{
+    text-shadow: 0px 0px 30px yellow;
+    font-weight: 700;
     
 }
-/* class styles for adding glow to text */
 
 .buttons
 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap:30px;
-    width:50%;
-
-     /* border:solid #ffffff 2px; */
-  
+    margin: 12.5px 0px;
+    
 }
 .buttons button
 {
@@ -219,15 +235,16 @@ p
         color:black;
         font-weight: 700;
         border:none;
+        box-shadow: 0px 0px 15px yellow;
 }
 .soc-handles
 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap:30px;
-    width:50%;
-    /* border:solid #ffffff 2px; */
+    margin: 12.5px 0px;
+    
 }
 .soc-handles i
 {
@@ -241,20 +258,22 @@ p
 {
     transform: scale(1.1);
     color:yellow;
+    text-shadow: 0px 0px 30px yellow;
 }
 
 /* Home section */
 
-/* About section with photo */
+
+
+/* About section */
 
 .about
 {
     display: flex ;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
     gap:20px;
-    min-height: 500px;
     width: 80%;
     border: solid white 2px;
     border-radius: 20px;
@@ -270,31 +289,14 @@ p
     margin-top: 30px;
 }
 
-.aboutme
+.about-text
 {
-    width: 90%;
-    min-height: 400px;
-    display: flex;
-    align-items: top;
-    justify-content: space-evenly;
-    gap:50px;
-    margin:auto;
+    width:90%;
+    margin-bottom: 30px;
 }
 
-.aboutme > div > img
-{
-    height: 380px;
-   
-}
 
-.aboutme > div > p
-{
-    font-size: 16px;
-    padding-top:30px;
-
-}
-
-/* About section with photo */
+/* About section */
 
 
 
@@ -316,7 +318,6 @@ p
     align-items: center ;
     justify-content: center;
     gap:10px;
-    /* border: white solid 2px; */
     margin-top: 40px;
     width:1150px;
     
@@ -378,6 +379,7 @@ p
     width:70px;
     height: 70px;
     transition: fill 0.3s ease;
+    transition: filter 0.3s ease;
 }
 
 .skill-section svg:hover, .skill-section svg:hover *
@@ -386,6 +388,10 @@ p
 
 }
 
+.skill-section svg>path:hover 
+{
+    box-shadow:0px 0px 30px yellow ;
+}
 
 .skill-section svg .notyellow
 {
@@ -396,6 +402,7 @@ p
 .skill-section i
 {
     font-size: 70px;
+    
 }
 
 .icon
@@ -409,8 +416,16 @@ p
     transform: scale(1.1);
     color:yellow;
     fill:yellow;
+    text-shadow: 0px 0px 30px yellow;
 }
 
+.svgicon {
+    transition: filter 0.3s ease;
+}
+
+.svgicon:hover {
+    filter: drop-shadow(0 0 30px yellow);
+}
     
 /* skills section */
 
@@ -539,8 +554,7 @@ p
     margin-left: auto;
     margin-right: auto;
     margin-top: 300px;
-    /* border:white solid 2px; */
-    
+
 }
 
 .contact-form 
@@ -550,7 +564,7 @@ p
     border:white solid 2px;
     border-radius: 8px;
     margin-top: 20px;
-    box-shadow:10px 10px 14px ;80
+    box-shadow:10px 10px 14px ;
 }
 
 .contact-form > form
@@ -568,7 +582,6 @@ p
     justify-content:center;
     gap:40px;
     width:100%;
-    /* border:white solid 2px; */
     padding:30px;
 }
 
@@ -588,7 +601,6 @@ input
 .text
 {
     width:100%;
-    /* border:white solid 2px ; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -606,8 +618,6 @@ textarea
     font-size: 16px;
     color:white;
     font-family: poppins;
-    /* overflow-x: hidden;
-    overflow-y: scroll; */
     resize: none;
     padding:15px;
 }
@@ -615,7 +625,6 @@ textarea
 
 .btn
 {
-    /* border:white solid 2px ; */
     height:100px;
     display: flex;
     align-items: center;

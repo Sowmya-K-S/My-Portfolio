@@ -19,6 +19,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   toggleGoToTopButton();
 };
 
+
 function toggleGoToTopButton() {
   var button = document.getElementById("goToTopBtn");
   // If the user has scrolled down, show the button; otherwise, hide it
@@ -29,6 +30,7 @@ function toggleGoToTopButton() {
   }
 }
 
+
 // Function to scroll to the top of the page
 function goToTop() {
   document.body.scrollTop = 0; // For Safari
@@ -38,11 +40,9 @@ function goToTop() {
 
 // Function from typejs
 var typed = new Typed('#element', {
-  strings: ['Sowmya', 'Student', 'Web-Developer', 'ML-Enthusiast','Tech-curious','Passionate'],
-  typeSpeed: 30,
+  strings: ['Student', 'Web-Developer', 'ML-Enthusiast','Tech-curious','Passionate'],
+  typeSpeed: 50,
   backSpeed: 20,
+  backDelay: 900,
   loop: true,
 });
-
-
-//function for glowing text
