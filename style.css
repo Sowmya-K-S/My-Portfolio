@@ -214,13 +214,21 @@ p
     
 }
 
+.connect
+{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .buttons
 {
     display: flex;
     align-items: center;
     justify-content: start;
     gap:30px;
-    margin: 12.5px 0px;
+    margin: 15px 0px;
     
 }
 .buttons button
@@ -327,7 +335,7 @@ p
 }
 
 
-.small-edubox
+.edubox
 {
     margin-top: 80px;
     display: flex;
@@ -335,7 +343,7 @@ p
     width: 100%;
 }
 
-.small-edubox>div
+.edubox>div
 {
     display:flex;
     flex-direction: row;
@@ -344,17 +352,17 @@ p
     width: 100%;
 }
 
-.small-edubox>div>:not(.timeline-small)
+.edubox>div>:not(.timeline)
 {
     width: 15%;
 }
 
-.small-edubox>div>.right-timeline
+.edubox>div>.right-timeline
 {
     text-align: right;
 }
 
-.small-edubox .timeline-small
+.edubox .timeline
 {
     width: 2px ;
     height: 200px;
@@ -364,7 +372,7 @@ p
     display: flex;
     justify-content: center;
 }
-.small-edubox .timeline-small::after
+.edubox .timeline::after
 {
     content: ' ';
     display: block;
@@ -597,7 +605,6 @@ p
    
     flex-direction: column;
     gap:20px;
-    width: 50%;
     height:700px;
     margin-left: auto;
     margin-right: auto;
@@ -607,12 +614,13 @@ p
 
 .contact-form 
 {
-    
-    /* width:90%; */
+
     border:white solid 2px;
     border-radius: 8px;
     margin-top: 20px;
     box-shadow:10px 10px 14px ;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .contact-form > form
@@ -701,22 +709,41 @@ textarea
     position:fixed;
     right: 10px;
     bottom:10px;
-    width:45px;
-    height: 45px;
+    width:40px;
+    height: 40px;
     background-color: white;
     border-radius: 50%;
     color:black;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 .up-button i
 {
-    line-height: 45px;
+    line-height: 40px;
     display: block;
     width: 100%;
     margin: auto;
     text-align: center;
+    animation: up-button 2s ease-out infinite;
 }
+
+@keyframes up-button 
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(-5px);   
+    }
+    100%
+    {
+        transform: translateY(0px);   
+    }
+
+}
+
 
 /* Up button */
 
