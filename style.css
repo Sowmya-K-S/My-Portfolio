@@ -169,7 +169,7 @@ p
 
 .hello
 {
-    font-size: 1rem;
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content:start;
@@ -177,7 +177,7 @@ p
 }
 .myname
 {
-    font-size: 1.6rem;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content:start;
@@ -194,7 +194,7 @@ p
 
 .type-write span
 {
-    font-size: 1.3rem;
+    font-size: 20px;
     
 }
 
