@@ -46,3 +46,21 @@ var typed = new Typed('#element', {
   backDelay: 900,
   loop: true,
 });
+
+
+// Function for hamburger menu
+let menu_icon = document.querySelector('.menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu_icon.addEventListener('click', function(){
+  menu_icon.classList.toggle('open');
+    navbar.classList.toggle('open');
+});
+
+// Function to hide navbar when clicking on navbar items
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', function() {
+      menu_icon.classList.remove('open');
+      navbar.classList.remove('open');
+  });
+});

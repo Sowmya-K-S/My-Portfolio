@@ -1,7 +1,7 @@
 html
 {
     scroll-behavior: smooth;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 
 body
@@ -25,7 +25,7 @@ p
     line-height: 35px;
     letter-spacing: 0.5px;
     word-spacing: 6px;
-    font-size: 17px;
+    font-size: 1.2rem;
 }
 
 /* Top logo and Navigation bar */
@@ -41,18 +41,18 @@ p
     height:70px;
     position:fixed;
     top:0px;
-    font-size: 17px;
+    font-size: 1rem;
     z-index:2;
     
 }
 
 .navbar
 {
-    margin: 100px;
+    margin: 70px;
    
 }
 
-.navbar > ul
+.navbar ul
 {
     list-style-type: none; 
     display:flex;
@@ -60,34 +60,38 @@ p
     align-items: center;
     gap:30px;
 }
-.navbar > ul > a
+.navbar a
 {
     text-decoration: none;
     color:white;
     position: relative;
 }
 
-.logo > a
+.logo
+{
+    margin-left: 5%;
+}
+
+.logo a
 {
     text-decoration: none;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 2rem;
     background: linear-gradient(-90deg, gold 0%, yellow 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     user-select: none;
     -webkit-user-drag: none;
 }
 
 
-.navbar > ul > a:hover
+.navbar a:hover
 {
     color:yellow;
 
 } 
 
-.navbar > ul > a::after
+.navbar a::after
 {
     content: ' ';
     display:block;
@@ -105,11 +109,19 @@ p
     
 }
 
-.navbar > ul > a:hover::after
+.navbar a:hover::after
 {
     visibility:visible;
     opacity:1;
     transform: translateY(0px);
+}
+
+.menu-icon
+{
+    color:#fff;
+    font-size: 1.7rem;
+    display: none;
+    padding-right: 20px;
 }
 
 /* Top logo and Navigation bar */
@@ -121,33 +133,30 @@ p
 .home
 {
     width:100%;
-    margin-top: 120px;
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
-   
     
 }
 
 .content
 {
-    width:40%;
     
 
     display: flex;
-    padding-left: 200px;
     align-items: start;
     justify-content: center;
     flex-direction: column;
+    margin-right: 10%;
     
     
 }
 .photo
 {
-    width:35%;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -160,7 +169,7 @@ p
 
 .hello
 {
-    font-size: 10px;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content:start;
@@ -168,7 +177,7 @@ p
 }
 .myname
 {
-    font-size: 25px;
+    font-size: 1.6rem;
     display: flex;
     align-items: center;
     justify-content:start;
@@ -185,7 +194,7 @@ p
 
 .type-write span
 {
-    font-size: 20px;
+    font-size: 1.5rem;
     
 }
 
@@ -199,7 +208,6 @@ p
 
 .dynamic
 {
-    width:350px;
     color: yellow;
     text-shadow: 0px 0px 30px yellow;
     font-weight: 700;
@@ -222,7 +230,7 @@ p
     background-color: transparent;
     color:white;
     border:2px solid white;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 8px;
     font-family: poppins;
     gap:80px;
@@ -248,7 +256,7 @@ p
 }
 .soc-handles i
 {
-    font-size: 38px;
+    font-size: 2.2rem;
     text-decoration: none;
     color:white;
     transition: transform 0.3s ease;
@@ -259,6 +267,11 @@ p
     transform: scale(1.1);
     color:yellow;
     text-shadow: 0px 0px 30px yellow;
+}
+
+.smallscreen
+{
+    display: none;
 }
 
 /* Home section */
@@ -309,45 +322,61 @@ p
     align-items: center;
     justify-content: center;
     margin-top: 300px;
-   
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.edubox
+
+.small-edubox
+{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.small-edubox>div
 {
     display:flex;
-    align-items: center ;
+    flex-direction: row;
     justify-content: center;
-    gap:10px;
-    margin-top: 40px;
-    width:1150px;
-    
+    align-items: start;
+    width: 100%;
 }
 
-.edubox > div
+.small-edubox>div>:not(.timeline-small)
 {
-    width: 320px;
+    width: 15%;
 }
-.round
+
+.small-edubox>div>.right-timeline
 {
+    text-align: right;
+}
+
+.small-edubox .timeline-small
+{
+    width: 2px ;
+    height: 200px;
+    margin: 0px 20px;
     background-color: white;
-    height: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.small-edubox .timeline-small::after
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: -10px;
     width: 10px;
-    border-radius: 20px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
 }
-.line
-{
-    width:350px;
-    height:2px;
-    background-color: white;
-}
-.timeline
-{
-    display:flex ;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 1000px;
-    margin-top: 10px;
-}
+
+
 
 /* Education section */
 
@@ -368,10 +397,10 @@ p
 {
     display:flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:center;
     width:70%;
     margin-top: 40px;
-    
+    gap: 4%;
 }
 
 .skill-section svg
@@ -401,7 +430,7 @@ p
 
 .skill-section i
 {
-    font-size: 70px;
+    font-size: 4.5rem;
     
 }
 
@@ -447,26 +476,26 @@ p
 {
     display:flex;
     align-items: center;
-    justify-content: space-between;
-    width:60%;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+    width:80%;
     margin-top: 40px;
 }
 
-.certifs>a
+.certifs a
 {
     text-decoration: none;
     color: white;
 }
 
-.certifs div
+.certifs>a
 {
     display: flex;
     flex-direction: column;
     align-items: center ;
     justify-content: center;
     border: solid white 3px;
-    height: 80px;
-    width: 400px;
     padding:10px;
     border-radius:10px;
     box-shadow:8px 8px 8px white ;
@@ -474,10 +503,24 @@ p
   
 }
 
-.certifs div:hover
+.certifs>a:hover
 {
     transform: scale(1.1);
     
+}
+
+.cert
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cert img
+{
+    height: 200px;
+    width: 300px;
 }
 
 /* Certification  */
@@ -501,8 +544,8 @@ p
 {
     display:flex;
     align-items: center;
-    justify-content: space-between;
-    width:60%;
+    justify-content: center;
+    width:80%;
     margin-top: 40px;
     flex-wrap: wrap;
     gap:30px;
@@ -515,26 +558,31 @@ p
     color: white;
 }
 
-.projs div
+.projs>a
 {
     display: flex;
     flex-direction: column;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
     border: solid white 3px;
-    height: 80px;
     padding:10px;
-    width: 400px;
     border-radius:10px;
     transition: transform 0.3s ease;
     box-shadow:8px 8px 8px white ;
 }
 
-.projs div:hover
+.projs>a:hover
 {
     transform: scale(1.1);
     
 }
+
+.proj img
+{
+    height: 200px;
+    width: 300px;
+}
+
 
 /* Projects  */
 
@@ -549,7 +597,7 @@ p
    
     flex-direction: column;
     gap:20px;
-    width: 50%;
+    /* width: 50%; */
     height:700px;
     margin-left: auto;
     margin-right: auto;
@@ -560,7 +608,7 @@ p
 .contact-form 
 {
     
-    width:90%;
+    /* width:90%; */
     border:white solid 2px;
     border-radius: 8px;
     margin-top: 20px;
@@ -592,7 +640,7 @@ input
     border:white solid 2px ;
     border-radius: 6px;
     background-color: transparent;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: white;
     font-family: poppins;
     padding:15px;
@@ -615,7 +663,7 @@ textarea
     width:85%;
     height:250px;
     margin:auto;
-    font-size: 16px;
+    font-size: 1.2rem;
     color:white;
     font-family: poppins;
     resize: none;
@@ -637,7 +685,7 @@ textarea
     background-color: transparent;
     color:white;
     border:2px solid white;
-    font-size: 16px;
+    font-size: 1.2rem;
     border-radius: 8px;
 }
 
@@ -658,7 +706,7 @@ textarea
     background-color: white;
     border-radius: 50%;
     color:black;
-    font-size: 25px;
+    font-size: 1.7rem;
 }
 
 .up-button i
@@ -689,7 +737,7 @@ textarea
 
 .quote-line>span
 {
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
@@ -705,14 +753,14 @@ textarea
 .nav-links a
 {
     color:white;
-    font-size: 14px;
+    font-size: 0.9rem;
     text-decoration: none;
     
 }
 
 .copyright>span
 {
-    font-size: 14px;
+    font-size:0.9rem;
     font-weight: 500;
 }
 
@@ -726,14 +774,14 @@ textarea
 
 .soc-icon>a>i
 {
-    font-size: 25px;
+    font-size:1.6rem;
     color:white;
 }
 
 
 .email>a
 {
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
     color: white;

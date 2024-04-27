@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <title>Sowmya's Portfolio </title>
 
     <!-- style sheet linkage -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsivity.css">
 
     <!-- typejs CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -39,19 +40,21 @@
     <!-- Top logo and Navigation bar -->
     <div class="top">
 
-        <div class="logo" style="margin:100px"><a href="">Sowmya</a></div>
+        <div class="logo"><a href="">Sowmya</a></div>
 
-        <div class="navbar"> 
-            <ul>
-            <a href="#home"><li>Home</li></a>
-            <a href="#about"><li>About</li></a>
-            <a href="#main-education"><li>Education</li> </a>
-            <a href="#skill-section"><li>Skills</li></a>
-            <a href="#certi"><li>Certificates</li></a>
-            <a href="#proj"><li>Projects</li></a>
-            <a href="#contact"><li>Contact me</li></a>
+        <div class="navbar">
+            <ul class="main-nav">
+            <a href="#home"><div class="nav-item"><a href="#home"><li>Home</li></a></div></a>
+            <a href="#about"><div class="nav-item"><a href="#about"><li>About</li></a></div></a>
+            <a href="#main-education"><div class="nav-item"><a href="#main-education"><li>Education</li> </a></div></a>
+            <a href="#skill-section"><div class="nav-item"><a href="#skill-section"><li>Skills</li></a></div></a>
+            <a href="#certi"><div class="nav-item"><a href="#certi"><li>Certificates</li></a></div></a>
+            <a href="#proj"><div class="nav-item"><a href="#proj"><li>Projects</li></a></div></a>
+            <a href="#contact"><div class="nav-item"><a href="#contact"><li>Contact me</li></a></div></a>
             </ul> 
         </div>
+
+        <div class="menu-icon"><li class="menu-icon"><i class="fa-solid fa-bars"></i></li></div>
 
     </div>
     <!-- Top logo and Navigation bar -->
@@ -59,6 +62,7 @@
 
     <!-- home -->
     <div data-aos="fade" class="home targetsection">
+
         <div class="content" id="home" >
 
             <div class="hello"><h1>Hello, It's Me</h1></div>
@@ -70,6 +74,25 @@
                 <div class="dynamic"><span id="element"></span></div>
             </div>
     
+            <div class="connect largescreen">
+                <div class="buttons">
+                    <a href="#contact"><button>Let's collaborate</button></a>
+                    <a href="https://drive.google.com/file/d/1XO6r4CqRdVuaJGtYbJ8Q7NaHuy3lq2Ea/view?usp=sharing" target="_blank"><button>My Resume</button></a>
+                </div>
+        
+                <div class="soc-handles">
+                    <div><a href="https://www.linkedin.com/in/sowmya-k-s-0b19b6256/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                    <div><a href="https://github.com/Sowmya-K-S" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                    <div ><a href="https://www.instagram.com/livelong__learning__/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div ><a href="https://twitter.com/sowmya68380" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>    
+                </div>
+            </div>
+        
+        </div>
+    
+        <div class="photo"><img src="./Assets/4.png" alt="My Photo"></div>
+
+        <div class="connect smallscreen">
             <div class="buttons">
                 <a href="#contact"><button>Let's collaborate</button></a>
                 <a href="https://drive.google.com/file/d/1XO6r4CqRdVuaJGtYbJ8Q7NaHuy3lq2Ea/view?usp=sharing" target="_blank"><button>My Resume</button></a>
@@ -81,12 +104,9 @@
                 <div ><a href="https://www.instagram.com/livelong__learning__/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
                 <div ><a href="https://twitter.com/sowmya68380" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>    
             </div>
-    
         </div>
-    
-        <div class="photo"><img src="./Assets/4.png" alt="My Photo"></div>
+        
     </div>
-   
     <!-- home -->
 
 
@@ -113,36 +133,39 @@
 
         <div class="target"><h1>Education</h1></div>
 
-        <div class="edubox">
+        <div class="edubox small-edubox">
             <div>
-                <h4>2016-2019</h4>
-                <h4>Secondary Education</h4>
-                <span>Daffodils English High School, Mandya</span>
+                <div class="left-timeline">
+                    <h4>2016-2019</h4>
+                    <h4>Secondary Education</h4>
+                </div>
+                <div class="timeline-small"></div>
+                <div class="right-timeline">
+                    <span>Daffodils English High School, Mandya</span>
+                </div>
             </div>
             <div>
-                <h4>2019-2021</h4>
-                <h4>Pre-University Education</h4>
-                <span>Sadvidya PU College, Mandya</span>
+                <div class="left-timeline">
+                    <h4>2019-2021</h4>
+                    <h4>Pre-University Education</h4>
+                </div>
+                <div class="timeline-small"></div>
+                <div class="right-timeline">
+                    <span>Sadvidya PU College, Mandya</span>
+                </div>
             </div>
             <div>
-                <h4>2021-Till date</h4>
-                <h4>Bachelor of Engineering <br> (Information Science and Engineering)</h4>
-                <span>PES College Of Engineering, Mandya</span>
+                <div class="left-timeline">
+                    <h4>2021-Till date</h4>
+                    <h4>Bachelor of Engineering <br> (Information Science and Engineering)</h4>
+                </div>
+                <div class="timeline-small"></div>
+                <div class="right-timeline">
+                    <span>PES College Of Engineering, Mandya</span>
+                </div>
             </div>
         </div>
 
-        <div class="timeline">
-            <div class="round"></div>
-            <div class="line"></div>
-            <div class="round"></div>
-            <div class="line"></div>
-            <div class="round"></div>
-            <div class="line"></div>
-        </div>
-
-        <div>
-
-        </div>
     </div>
     <!-- Education -->
 
@@ -176,7 +199,6 @@
 
     </div>
        
-
     </div>
     <!-- Skills -->
 
@@ -185,14 +207,83 @@
     <div data-aos="fade-up" class="certi targetsection" id="certi">
 
         <div class="target"><h1>Certificates</h1></div>
-
+        
         <div class="certifs">
 
-            <a href="https://www.linkedin.com/learning/certificates/2cedbab49302322bbb8f97df53617d1b16cfb0a25e53453ae9a0990de0013920" target="_blank"><div> <h3>SQL essential Training <br> (LinkedIn learning) </h3></div></a>
+        <a href="https://drive.google.com/file/d/17txFPtDojhV_55_-ANH51TB9shkq7BR5/view?usp=drive_link" target="_blank">
+            <div class="cert">
 
-            <a href="https://www.linkedin.com/learning/certificates/95de62c93ad7cc29ddf1e3d782cebc3881842ab11e995aa6806fc2a9f522fa17" target="_blank"><div> <h3>Advertising on Youtube <br> (LinkedIn learning)</h3> </div></a>
+            <div class="certphoto">
+                <img src="./Assets/certifhack.jpg" alt="certificate photo">
+            </div>
 
+            <div class="certtext">
+                <div> <h5>Ethical Hacking for Beginners</h5></div>
+            </div>
+
+                </div>
+        </a>
+
+        <a href="https://www.linkedin.com/learning/certificates/2cedbab49302322bbb8f97df53617d1b16cfb0a25e53453ae9a0990de0013920" target="_blank">
+                <div class="cert">
+
+                <div class="certphoto">
+                   <img src="./Assets/certif1png.png" alt="certificate photo">
+                </div>
+
+                <div class="certtext">
+                    <div> <h5>SQL essential Training</h5></div>
+                </div>
+
+                 </div>
+        </a>
+
+
+        <a href="https://drive.google.com/file/d/1vsH1htFlZSWjQ4A-kocNFW98EtxNpney/view?usp=drive_link" target="_blank">    
+        <div class="cert">
+
+                <div class="certphoto">
+                    <img src="./Assets/certif2.png" alt="">
+                </div>
+
+                <div class="certtext">
+                    <div> <h5>Advertising on youtube</h5></div>
+                </div>
         </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1crTP2F9qq1buHPYaEE-E48QU-1YUJXdk/view?usp=drive_link" target="_blank">
+            <div class="cert">
+    
+                    <div class="certphoto">
+                        <img src="./Assets/certifstra.jpg" alt="">
+                    </div>
+    
+                    <div class="certtext">
+                        <div> <h5>Stratergy and Leadership for Career Development</h5></div>
+                    </div>
+            </div>
+        </a>
+
+
+        <a href="https://drive.google.com/file/d/1-BUcQdxQ7ipeRsKQ3r6wEgd-GYVqyifk/view?usp=drive_link" target="_blank">
+            <div class="cert">
+    
+                    <div class="certphoto">
+                        <img src="./Assets/devops.png" alt="">
+                    </div>
+    
+                    <div class="certtext">
+                        <div><h5>Foundation Training and Certification on Devops</h5></div>
+                    </div>
+            </div>
+        </a>
+
+        
+
+       
+    </div>
+
     </div>
     <!-- Certificates -->
 
@@ -204,13 +295,75 @@
 
         <div class="projs">
 
-            <a href="https://github.com/Sowmya-K-S/Hospital_Management_System" target="_blank"><div> <h3>Hospital Management System</h3></div></a>
+            <a href="https://github.com/Sowmya-K-S/Hospital_Management_System" target="_blank">
+                <div class="cert">
 
-            <a href="https://github.com/Sowmya-K-S/Python-Quiz-Master" target="_blank"><div> <h3>Quiz Master</h3> </div></a>
+                <div class="projphoto">
+                   <img src="./Assets/HMS.png" alt="certificate photo">
+                </div>
 
-            <a href="https://github.com/Sowmya-K-S/Tic_Tac_Toe" target="_blank"><div> <h3>Tic-Tac-Toe</h3> </div></a>
+                <div class="projtext">
+                    <div> <h5>Hospital Managment System </h5></div>
+                </div>
 
-            <a href="https://github.com/Sowmya-K-S/Weather-Website" target="_blank"><div> <h3>Weather Website</h3> </div></a>
+                 </div>
+            </a>
+
+            <a href="https://github.com/Sowmya-K-S/Python-Quiz-Master" target="_blank" target="_blank">
+                <div class="cert">
+
+                <div class="projphoto">
+                   <img src="./Assets/quizmaster.png" alt="certificate photo">
+                </div>
+
+                <div class="projtext">
+                    <div> <h5>Python-Quiz Master</h5></div>
+                </div>
+
+                 </div>
+            </a>
+
+            <a href="https://github.com/Sowmya-K-S/Tic_Tac_Toe" target="_blank">
+            <div class="cert">
+
+            <div class="projphoto">
+               <img src="./Assets/tictactoe.png" alt="certificate photo">
+            </div>
+
+            <div class="projtext">
+                <div> <h5>Tic Tac Toe</h5></div>
+            </div>
+
+             </div>
+            </a>
+
+            <a href="https://github.com/Sowmya-K-S/Weather-Website" target="_blank">
+                <div class="cert">
+    
+                <div class="projphoto">
+                   <img src="./Assets/weatherwebsite.png" alt="certificate photo">
+                </div>
+    
+                <div class="projtext">
+                    <div> <h5>Weather Website</h5></div>
+                </div>
+    
+                 </div>
+            </a>
+
+            <a href="https://github.com/Sowmya-K-S/Guess-the-number-game" target="_blank">
+                <div class="cert">
+
+                <div class="projphoto">
+                   <img src="./Assets/guess.png" alt="certificate photo">
+                </div>
+
+                <div class="projtext">
+                    <div> <h5>Guess The Number Game </h5></div>
+                </div>
+
+                 </div>
+            </a>
 
         </div>
     </div>
