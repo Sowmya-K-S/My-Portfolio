@@ -25,8 +25,6 @@
         margin: 0;
         gap:0;
         z-index: -2;
-      
-
         background-color: #00000010;
         backdrop-filter: blur(20px);
     }
@@ -41,7 +39,7 @@
     .navbar a 
     {
         display: block;
-       margin: 17px 0;
+        margin: 11px 0;
         padding: 0px 25px;
         transition: all .50s ease;
     }
@@ -76,7 +74,7 @@
 
     .navbar.open
     {
-        right:2%;
+        right:5%;
     }
 
 
