@@ -194,7 +194,7 @@ p
 
 .type-write span
 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     
 }
 
@@ -597,7 +597,7 @@ p
    
     flex-direction: column;
     gap:20px;
-    /* width: 50%; */
+    width: 50%;
     height:700px;
     margin-left: auto;
     margin-right: auto;
