@@ -1,13 +1,13 @@
-
-
 /* Media query for responsive design */
 @media (max-width:1023px)
 {   /* hamburger menu */
-   .menu-icon
+
+    .menu-icon-div
     {
+        margin-right: 5%;
         display: block;
     }
-
+    
     .navbar
     {
         position:fixed;
@@ -45,7 +45,7 @@
 
     .navbar a:hover
     {
-        color: black  !important;
+        color: var(--primary-bg-color) !important;
         font-weight: 600;
     }
 
@@ -57,12 +57,12 @@
     
     .nav-item:hover
     {
-       background-color: #fff;
+       background-color: var(--primary-color);
     }
 
     .nav-item:hover a 
     {
-        color: #000;
+        color: var(--primary-bg-color);
         font-weight: 600;
     }
 
@@ -171,7 +171,6 @@
         justify-content:space-around;
         flex-direction: column;
         height:250px;
-        background-color:#101015;
     }
 }
 

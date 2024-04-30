@@ -49,13 +49,17 @@ var typed = new Typed('#element', {
 
 
 // Function for hamburger menu
-let menu_icon = document.querySelector('.menu-icon');
+let menu_icon = document.querySelector('.menu-icon-div');
 let navbar = document.querySelector('.navbar');
 
-menu_icon.addEventListener('click', function(){
-  menu_icon.classList.toggle('open');
-    navbar.classList.toggle('open');
-});
+if(menu_icon)
+{
+  menu_icon.addEventListener('click', function(){
+    menu_icon.classList.toggle('open');
+      navbar.classList.toggle('open');
+  });
+}
+
 
 // Function to hide navbar when clicking on navbar items
 document.querySelectorAll('.nav-item').forEach(item => {
@@ -64,3 +68,68 @@ document.querySelectorAll('.nav-item').forEach(item => {
       navbar.classList.remove('open');
   });
 });
+
+
+// Function to change mode
+
+let mode_div = document.querySelector(".mode-change");
+let mode = document.querySelector("#mode");
+
+// Function to set the mode in localStorage
+function setMode(mode) {
+  localStorage.setItem('mode', mode);
+}
+
+// Function to retrieve the mode from localStorage
+function getMode() {
+  return localStorage.getItem('mode');
+}
+
+// Function to apply mode based on stored mode
+function applyMode() {
+  let storedMode = getMode();
+  if (storedMode === 'dark') {
+    enableDarkMode();
+  } else {
+    enableLightMode();
+  }
+}
+
+// Function to enable dark mode
+function enableDarkMode() {
+  mode.classList.remove("bx-sun");
+  mode.classList.add("bx-moon");
+  document.documentElement.style.setProperty('--primary-color', '#ffffff');
+  document.documentElement.style.setProperty('--secondary-color', '#FFFF00');
+  document.documentElement.style.setProperty('--primary-bg-color', '#050505');
+  document.documentElement.style.setProperty('--secondary-bg-color', '#101015');
+  document.documentElement.style.setProperty('--gradient-color-1', '#ffff00');
+  document.documentElement.style.setProperty('--gradient-color-2', '#FFD700');
+  setMode('dark'); // Store the mode
+}
+
+// Function to enable light mode
+function enableLightMode() {
+  mode.classList.remove("bx-moon");
+  mode.classList.add("bx-sun");
+  document.documentElement.style.setProperty('--primary-color', '#000000');
+  document.documentElement.style.setProperty('--secondary-color', '#007bff');
+  document.documentElement.style.setProperty('--primary-bg-color', '#f8f9fa');
+  document.documentElement.style.setProperty('--secondary-bg-color', '#e9ecef');
+  document.documentElement.style.setProperty('--gradient-color-1', '#28a745');
+  document.documentElement.style.setProperty('--gradient-color-2', '#FFD700');
+  setMode('light'); // Store the mode
+}
+
+// Event listener for mode changer
+mode_div.addEventListener('click', function () {
+  if (mode.classList.contains("bx-sun")) {
+    enableDarkMode();
+  } else {
+    enableLightMode();
+  }
+});
+
+// Apply mode on page load
+applyMode();
+

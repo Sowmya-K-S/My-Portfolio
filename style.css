@@ -1,3 +1,14 @@
+:root 
+{
+    --primary-color: #ffffff;
+    --secondary-color: #FFFF00;
+    --primary-bg-color: #050505;
+    --secondary-bg-color: #101015;
+    --gradient-color-1: #ffff00;
+    --gradient-color-2: #ffd700;
+}
+
+
 html
 {
     scroll-behavior: smooth;
@@ -6,8 +17,8 @@ html
 
 body
 {
-    background-color:#050505;
-    color:white;
+    background-color:var(--primary-bg-color);
+    color:var(--primary-color);
     font-family: poppins;
     height:100vh;
     
@@ -36,13 +47,14 @@ p
     align-items: center;
     justify-content:space-between;
     color:red;
-    background-color: #050505;
+    background-color: var(--primary-bg-color);
     width:100vw;
     height:70px;
     position:fixed;
     top:0px;
     font-size: 1.2rem;
     z-index:2;
+    box-shadow: 0px 5px 10px #00000050;
     
 }
 
@@ -63,7 +75,7 @@ p
 .navbar a
 {
     text-decoration: none;
-    color:white;
+    color:var(--primary-color);
     position: relative;
 }
 
@@ -77,7 +89,7 @@ p
     text-decoration: none;
     font-weight: 700;
     font-size: 2rem;
-    background: linear-gradient(-90deg, gold 0%, yellow 100%);
+    background: linear-gradient(-90deg, var(--gradient-color-2) 0%, var(--gradient-color-1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     user-select: none;
@@ -87,7 +99,7 @@ p
 
 .navbar a:hover
 {
-    color:yellow;
+    color:var(--secondary-color);
 
 } 
 
@@ -100,7 +112,7 @@ p
     margin: auto;
     width: 60%;
     height: 3px;
-    background-color: yellow;
+    background-color: var(--secondary-color);
     border-radius: 2px;
     position: relative;
     bottom :-1.5px;
@@ -116,17 +128,58 @@ p
     transform: translateY(0px);
 }
 
-.menu-icon
+
+.menu-icon-div
 {
-    color:#fff;
+    color:var(--primary-color);
     font-size: 1.7rem;
-    display: none;
-    padding-right: 20px;
+    display: none;  
 }
+
 
 /* Top logo and Navigation bar */
 
+/* mode changer button */
 
+    .mode-change
+    {
+        color:var(--primary-bg-color);
+        font-size: 25px;
+        background-color: var(--primary-color);
+        border: none;
+        position: fixed;
+        top:50%;
+        left: 0px;
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 50% 50% 0px;
+    }
+    .mode-change::before, .mode-change::after
+    {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: transparent;
+        left: -2px;
+    }
+    .mode-change::before
+    {
+        top: -30px;
+        box-shadow: -12px 8px var(--primary-color);
+    }
+    .mode-change::after
+    {
+        bottom: -30px;
+        box-shadow: -12px -8px var(--primary-color);
+    }
+
+/* mode changer button */
 
 /* Home section */
 
@@ -208,8 +261,8 @@ p
 
 .dynamic
 {
-    color: yellow;
-    text-shadow: 0px 0px 30px yellow;
+    color: var(--secondary-color);
+    text-shadow: 0px 0px 30px var(--secondary-color);
     font-weight: 700;
     
 }
@@ -236,8 +289,8 @@ p
     height: 50px;
     width:150px;
     background-color: transparent;
-    color:white;
-    border:2px solid white;
+    color:var(--primary-color);
+    border:2px solid var(--primary-color);
     font-size: 1rem;
     border-radius: 8px;
     font-family: poppins;
@@ -247,11 +300,11 @@ p
 .buttons button:hover
 {
         transform: scale(1.1);
-        background-color:yellow;
-        color:black;
+        background-color:var(--secondary-color);
+        color:var(--primary-bg-color);
         font-weight: 700;
         border:none;
-        box-shadow: 0px 0px 15px yellow;
+        box-shadow: 0px 0px 15px var(--secondary-color);
 }
 .soc-handles
 {
@@ -266,15 +319,15 @@ p
 {
     font-size: 2.2rem;
     text-decoration: none;
-    color:white;
+    color:var(--primary-color);
     transition: transform 0.3s ease;
 }
 
 .soc-handles i:hover
 {
     transform: scale(1.1);
-    color:yellow;
-    text-shadow: 0px 0px 30px yellow;
+    color:var(--secondary-color);
+    text-shadow: 0px 0px 30px var(--secondary-color);
 }
 
 .smallscreen
@@ -296,9 +349,9 @@ p
     justify-content:center;
     gap:20px;
     width: 80%;
-    border: solid white 2px;
+    border: solid var(--primary-color) 2px;
     border-radius: 20px;
-    box-shadow:10px 10px 8px white ;
+    box-shadow:10px 10px 8px var(--primary-color) ;
     margin-top: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -367,7 +420,7 @@ p
     width: 2px ;
     height: 200px;
     margin: 0px 20px;
-    background-color: white;
+    background-color: var(--primary-color);
     position: relative;
     display: flex;
     justify-content: center;
@@ -380,7 +433,7 @@ p
     top: -10px;
     width: 10px;
     height: 10px;
-    background-color: #fff;
+    background-color: var(--primary-color);
     border-radius: 50%;
 }
 
@@ -421,18 +474,18 @@ p
 
 .skill-section svg:hover, .skill-section svg:hover *
 {
-    fill:yellow !important; 
+    fill:var(--secondary-color) !important; 
 
 }
 
 .skill-section svg>path:hover 
 {
-    box-shadow:0px 0px 30px yellow ;
+    box-shadow:0px 0px 30px var(--secondary-color) ;
 }
 
 .skill-section svg .notyellow
 {
-    fill:black !important; 
+    fill:var(--primary-bg-color) !important; 
 }
 
 
@@ -451,9 +504,9 @@ p
 .icon:hover
 {
     transform: scale(1.1);
-    color:yellow;
-    fill:yellow;
-    text-shadow: 0px 0px 30px yellow;
+    color:var(--secondary-color);
+    fill:var(--secondary-color);
+    text-shadow: 0px 0px 30px var(--secondary-color);
 }
 
 .svgicon {
@@ -461,7 +514,7 @@ p
 }
 
 .svgicon:hover {
-    filter: drop-shadow(0 0 30px yellow);
+    filter: drop-shadow(0 0 30px var(--secondary-color));
 }
     
 /* skills section */
@@ -494,7 +547,7 @@ p
 .certifs a
 {
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
 }
 
 .certifs>a
@@ -503,10 +556,10 @@ p
     flex-direction: column;
     align-items: center ;
     justify-content: center;
-    border: solid white 3px;
+    border: solid var(--primary-color) 3px;
     padding:10px;
     border-radius:10px;
-    box-shadow:8px 8px 8px white ;
+    box-shadow:8px 8px 8px var(--primary-color) ;
     transition: transform 0.3s ease;
   
 }
@@ -563,7 +616,7 @@ p
 .projs>a
 {
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
 }
 
 .projs>a
@@ -572,11 +625,11 @@ p
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid white 3px;
+    border: solid var(--primary-color) 3px;
     padding:10px;
     border-radius:10px;
     transition: transform 0.3s ease;
-    box-shadow:8px 8px 8px white ;
+    box-shadow:8px 8px 8px var(--primary-color) ;
 }
 
 .projs>a:hover
@@ -615,7 +668,7 @@ p
 .contact-form 
 {
 
-    border:white solid 2px;
+    border:var(--primary-color) solid 2px;
     border-radius: 8px;
     margin-top: 20px;
     box-shadow:10px 10px 14px ;
@@ -645,11 +698,11 @@ input
 {
     width:250px;
     height:40px;
-    border:white solid 2px ;
+    border:var(--primary-color) solid 2px ;
     border-radius: 6px;
     background-color: transparent;
     font-size: 1.2rem;
-    color: white;
+    color: var(--primary-color);
     font-family: poppins;
     padding:15px;
 }
@@ -665,14 +718,14 @@ input
 
 textarea
 {
-    border:white solid 2px ;
+    border:var(--primary-color) solid 2px ;
     border-radius: 6px;
     background-color: transparent;
     width:85%;
     height:250px;
     margin:auto;
     font-size: 1.2rem;
-    color:white;
+    color:var(--primary-color);
     font-family: poppins;
     resize: none;
     padding:15px;
@@ -691,8 +744,8 @@ textarea
     height: 45px;
     width:130px;
     background-color: transparent;
-    color:white;
-    border:2px solid white;
+    color:var(--primary-color);
+    border:2px solid var(--primary-color);
     font-size: 1.2rem;
     border-radius: 8px;
 }
@@ -711,9 +764,9 @@ textarea
     bottom:10px;
     width:40px;
     height: 40px;
-    background-color: white;
+    background-color: var(--primary-color);
     border-radius: 50%;
-    color:black;
+    color:var(--primary-bg-color);
     font-size: 1.5rem;
 }
 
@@ -724,14 +777,14 @@ textarea
     width: 100%;
     margin: auto;
     text-align: center;
-    animation: up-button 2s ease-out infinite;
+    animation: up-button 1.5s ease-out infinite;
 }
 
 @keyframes up-button 
 {
     0%
     {
-        transform: translateY(0px);
+        transform: translateY(5px);
     }
     50%
     {
@@ -739,7 +792,7 @@ textarea
     }
     100%
     {
-        transform: translateY(0px);   
+        transform: translateY(5px);   
     }
 
 }
@@ -759,7 +812,7 @@ textarea
     align-items: center;
     justify-content: space-evenly;
     height:100px;
-    background-color:#101015;
+    background-color:var(--secondary-bg-color);
 }
 
 .quote-line>span
@@ -779,7 +832,7 @@ textarea
 
 .nav-links a
 {
-    color:white;
+    color:var(--primary-color);
     font-size: 0.9rem;
     text-decoration: none;
     
@@ -802,7 +855,7 @@ textarea
 .soc-icon>a>i
 {
     font-size:1.6rem;
-    color:white;
+    color:var(--primary-color);
 }
 
 
@@ -811,7 +864,7 @@ textarea
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
 }
 
 
