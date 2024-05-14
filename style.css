@@ -1,0 +1,901 @@
+:root 
+{
+    --primary-color: #ffffff;
+    --secondary-color: #FFFF00;
+    --primary-bg-color: #050505;
+    --secondary-bg-color: #101015;
+    --gradient-color-1: #ffff00;
+    --gradient-color-2: #ffd700;
+    --scroll-bar-color :#ffffff50;
+    --nav-shadow-color: #00000050;
+}
+
+::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: transparent;
+    padding: 0px 10px;
+    
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--scroll-bar-color);
+    width:10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button
+{
+   height: 10px;
+}
+
+
+
+html
+{
+    scroll-behavior: smooth;
+    margin-top: 100px;
+}
+
+body
+{
+    background-color:var(--primary-bg-color);
+    color:var(--primary-color);
+    font-family: poppins;
+    height:100vh;
+    
+}
+
+*
+{
+    margin : 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+p
+{
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    word-spacing: 6px;
+    font-size: 1.2rem;
+}
+
+/* Top logo and Navigation bar */
+.top
+{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    color:red;
+    background-color: var(--primary-bg-color);
+    width:100vw;
+    height:70px;
+    position:fixed;
+    top:0px;
+    font-size: 1.2rem;
+    z-index:2;
+    box-shadow: 0px 5px 10px var(--nav-shadow-color);
+    
+}
+
+.navbar
+{
+    margin: 70px;
+   
+}
+
+.navbar ul
+{
+    list-style-type: none; 
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    gap:15px;
+}
+.navbar a
+{
+    text-decoration: none;
+    color:var(--primary-color);
+    position: relative;
+}
+
+.logo
+{
+    margin-left: 5%;
+}
+
+.logo a
+{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    background: linear-gradient(-90deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+.navbar a:hover
+{
+    color:var(--secondary-color);
+
+} 
+
+.navbar a::after
+{
+    content: ' ';
+    display:block;
+    visibility:hidden;
+    opacity:0;
+    margin: auto;
+    width: 60%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    position: relative;
+    bottom :-1.5px;
+    transition:0.2s ease-out;
+    transform: translateY(5px);
+    
+}
+
+.navbar a:hover::after
+{
+    visibility:visible;
+    opacity:1;
+    transform: translateY(0px);
+}
+
+
+.menu-icon-div
+{
+    color:var(--primary-color);
+    font-size: 1.7rem;
+    display: none;  
+}
+
+
+/* Top logo and Navigation bar */
+
+/* mode changer button */
+
+    .mode-change
+    {
+        color:var(--primary-bg-color);
+        font-size: 25px;
+        background-color: var(--primary-color);
+        border: none;
+        position: fixed;
+        top:50%;
+        left: 0px;
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 50% 50% 0px;
+    }
+    .mode-change::before, .mode-change::after
+    {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: transparent;
+        left: -2px;
+    }
+    .mode-change::before
+    {
+        top: -30px;
+        box-shadow: -12px 8px var(--primary-color);
+    }
+    .mode-change::after
+    {
+        bottom: -30px;
+        box-shadow: -12px -8px var(--primary-color);
+    }
+
+/* mode changer button */
+
+/* Home section */
+
+.home
+{
+    width:100%;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.content
+{
+    
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 10%;
+    
+    
+}
+.photo
+{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.photo>img
+{
+    height: 400px;
+}
+
+.hello
+{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+   
+}
+.myname
+{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    
+}
+
+.type-write
+{
+    display: flex;
+    justify-content:start;
+    gap:10px;
+   
+}
+
+.type-write span
+{
+    font-size: 20px;
+    
+}
+
+
+
+.static
+{
+    font-weight: 700;
+    
+}
+
+.dynamic
+{
+    color: var(--secondary-color);
+    text-shadow: 0px 0px 30px var(--secondary-color);
+    font-weight: 700;
+    
+}
+
+.connect
+{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:30px;
+    margin: 15px 0px;
+    
+}
+.buttons button
+{
+    height: 50px;
+    width:150px;
+    background-color: transparent;
+    color:var(--primary-color);
+    border:2px solid var(--primary-color);
+    font-size: 1rem;
+    border-radius: 8px;
+    font-family: poppins;
+    gap:80px;
+    transition: transform 0.3s ease;
+}
+.buttons button:hover
+{
+        transform: scale(1.1);
+        background-color:var(--secondary-color);
+        color:var(--primary-bg-color);
+        font-weight: 700;
+        border:none;
+        box-shadow: 0px 0px 15px var(--secondary-color);
+}
+.soc-handles
+{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:30px;
+    margin: 12.5px 0px;
+    
+}
+.soc-handles i
+{
+    font-size: 2.2rem;
+    text-decoration: none;
+    color:var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.soc-handles i:hover
+{
+    transform: scale(1.1);
+    color:var(--secondary-color);
+    text-shadow: 0px 0px 30px var(--secondary-color);
+}
+
+.smallscreen
+{
+    display: none;
+}
+
+/* Home section */
+
+
+
+/* About section */
+
+.about
+{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap:20px;
+    width: 80%;
+    border: solid var(--primary-color) 2px;
+    border-radius: 20px;
+    box-shadow:10px 10px 8px var(--primary-color) ;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+.about>div>h1
+{
+    margin-top: 30px;
+}
+
+.about-text
+{
+    width:90%;
+    margin-bottom: 30px;
+}
+
+
+/* About section */
+
+
+
+/* Education section */
+
+.main-education
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.edubox
+{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.edubox>div
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+
+.edubox>div>:not(.timeline)
+{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edubox>div>.right-timeline
+{
+    text-align: right;
+}
+
+.edubox .timeline
+{
+    width: 2px ;
+    height: 200px;
+    margin: 0px 20px;
+    background-color: var(--primary-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.edubox .timeline::after
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+
+
+/* Education section */
+
+
+/* Skills section */
+
+.skill-section
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin-top: 300px;
+    
+}
+
+.skill-icons
+{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    width:70%;
+    margin-top: 40px;
+    gap: 4%;
+}
+
+.skill-section svg
+{
+    width:70px;
+    height: 70px;
+    transition: fill 0.3s ease;
+    transition: filter 0.3s ease;
+}
+
+.skill-section svg:hover, .skill-section svg:hover *
+{
+    fill:var(--secondary-color) !important; 
+
+}
+
+.skill-section svg>path:hover 
+{
+    box-shadow:0px 0px 30px var(--secondary-color) ;
+}
+
+.skill-section svg .notyellow
+{
+    fill:var(--primary-bg-color) !important; 
+}
+
+
+.skill-section i
+{
+    font-size: 4.5rem;
+    
+}
+
+.icon
+{
+    transition: transform 0.3s ease;
+    
+}
+
+.icon:hover
+{
+    transform: scale(1.1);
+    color:var(--secondary-color);
+    fill:var(--secondary-color);
+    text-shadow: 0px 0px 30px var(--secondary-color);
+}
+
+.svgicon {
+    transition: filter 0.3s ease;
+}
+
+.svgicon:hover {
+    filter: drop-shadow(0 0 30px var(--secondary-color));
+}
+    
+/* skills section */
+
+
+/* Certification  */
+
+.certi
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 300px;
+   
+
+}
+
+.certifs
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+    width:80%;
+    margin-top: 40px;
+}
+
+.certifs a
+{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.certifs a
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+    border: solid var(--primary-color) 3px;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:8px 8px 8px var(--primary-color) ;
+    transition: transform 0.3s ease-in;
+  
+}
+
+.certifs a:hover
+{
+    transform: scale(1.1) ;
+    
+}
+
+.cert
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cert img
+{
+    height: 200px;
+    width: 300px;
+}
+
+/* Certification  */
+
+
+
+/* Projects  */
+
+.proj
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 300px;
+   
+
+}
+
+.projs
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap:30px;
+    
+}
+
+.projs a
+{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.projs a
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid var(--primary-color) 3px;
+    padding:10px;
+    border-radius:10px;
+    transition: transform 0.3s ease;
+    box-shadow:8px 8px 8px var(--primary-color) ;
+}
+
+.projs a:hover
+{
+    transform: scale(1.1) !important;
+    
+}
+
+.proj img
+{
+    height: 200px;
+    width: 300px;
+}
+
+
+/* Projects  */
+
+
+
+/* Contact form */
+
+.contact
+{
+    display: flex;
+    align-items: center;
+   
+    flex-direction: column;
+    gap:20px;
+    height:700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+
+}
+
+.contact-form 
+{
+
+    border:var(--primary-color) solid 2px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow:10px 10px 14px ;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contact-form > form
+{ 
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.name-mail
+{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap:40px;
+    width:100%;
+    padding:30px;
+}
+
+input
+{
+    width:250px;
+    height:40px;
+    border:var(--primary-color) solid 2px ;
+    border-radius: 6px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-family: poppins;
+    padding:15px;
+}
+
+.text
+{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+}
+
+textarea
+{
+    border:var(--primary-color) solid 2px ;
+    border-radius: 6px;
+    background-color: transparent;
+    width:85%;
+    height:250px;
+    margin:auto;
+    font-size: 1.2rem;
+    color:var(--primary-color);
+    font-family: poppins;
+    resize: none;
+    padding:15px;
+}
+
+
+.btn
+{
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease;
+}
+.btn>button
+{
+    height: 45px;
+    width:130px;
+    background-color: transparent;
+    color:var(--primary-color);
+    border:2px solid var(--primary-color);
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+.btn:hover
+{
+    transform: scale(1.1);}
+
+/* Contact form */
+
+
+
+/* Up button */
+
+.up-button
+{
+    position:fixed;
+    right: 10px;
+    bottom:10px;
+    width:40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color:var(--primary-bg-color);
+    font-size: 1.5rem;
+}
+
+.up-button i
+{
+    line-height: 40px;
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    animation: up-button 1.5s ease-out infinite;
+}
+
+@keyframes up-button 
+{
+    0%
+    {
+        transform: translateY(5px);
+    }
+    50%
+    {
+        transform: translateY(-5px);   
+    }
+    100%
+    {
+        transform: translateY(5px);   
+    }
+
+}
+
+
+/* Up button */
+
+
+
+/* footer */
+
+.foot
+{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height:100px;
+    background-color:var(--secondary-bg-color);
+}
+
+.quote-line>span
+{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-links
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    
+}
+
+.nav-links a
+{
+    color:var(--primary-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    
+}
+
+.copyright>span
+{
+    font-size:0.9rem;
+    font-weight: 500;
+}
+
+.social-links
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.soc-icon>a>i
+{
+    font-size:1.6rem;
+    color:var(--primary-color);
+}
+
+
+.email>a
+{
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+/* footer */
