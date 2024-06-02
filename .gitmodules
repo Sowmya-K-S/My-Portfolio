@@ -1,3 +1,9 @@
 [submodule "Guess-the-number-game"]
 	path = Guess-the-number-game
 	url = https://github.com/Sowmya-K-S/Guess-the-number-game.git
+[submodule "PRODIGY_WD_02"]
+	path = PRODIGY_WD_02
+	url = https://github.com/Sowmya-K-S/PRODIGY_WD_02.git
+[submodule "Weather-Website"]
+	path = Weather-Website
+	url = https://github.com/Sowmya-K-S/Weather-Website.git
