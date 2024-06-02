@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font - poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div  class='main-heading'>
+        <h1>Guess The Number Game</h1>
+    </div>
+    
+    <div class="main-body">
+
+        <div class="instructions">
+            <p style="text-align: center;">
+                Try to guess a number between 1 to 100. <br>You have 10 attempts to guess the right answer.
+            </p>
+        </div>
+
+        <div class="input-area">
+
+            <span class="form-head">
+                Enter Guessed Number
+            </span>
+            <form>
+                <input  id="num-input" type="number">
+            </form>
+           
+            <button class="submit-btn">Submit</button>
+        </div>
+
+        <div class="output-area">
+            <span>Previous Guesses <span class="prev-guess"></span></span>
+            <span>you are left with <span class="guess-left"> 10 </span> guesses</span>
+            <span class="low-or-high"></span>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html>

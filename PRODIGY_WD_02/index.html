@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Poppins font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- box icons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+    <div class="main">
+
+    <div class="heading"><span>Stop Watch</span></div>
+
+    <!-- mode changing button -->
+    <button class="mode-change"><i id="mode" class='bx bx-sun'></i></button>
+    <!-- mode changing button -->
+    
+    <div class="time">
+        <div class="hour">00</div>
+        <div class="seperator">:</div>
+        <div class="minute">00</div>
+        <div class="seperator">:</div>
+        <div class="second">00</div>
+        <div class="seperator">:</div>
+        <div class="millisecond">00</div>
+    </div>
+
+    <div class="buttons">
+        <div><button class="start">Start</button></div>
+        <div><button class="split">Split / Lap</button></div>
+        <div><button class="reset">Reset</button></div>
+    </div>
+
+    <div class="lap-split-times">
+        <div class="right-part">
+            <h3>Split Time</h3>
+            <div class="split-time"></div>
+        </div>
+        <div class="left-part">
+            <h3>Lap Time</h3>
+            <div class="lap-time"></div>
+        </div>
+    </div>
+    
+
+    </div>
+    
+<script src="./script.js"></script>
+</body>
+</html>
