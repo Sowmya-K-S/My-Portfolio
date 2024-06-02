@@ -1,0 +1,3 @@
+[submodule "Guess-the-number-game"]
+	path = Guess-the-number-game
+	url = https://github.com/Sowmya-K-S/Guess-the-number-game.git
