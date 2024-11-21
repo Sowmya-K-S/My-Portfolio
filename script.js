@@ -40,7 +40,7 @@ function goToTop() {
 
 // Function from typejs
 var typed = new Typed('#element', {
-  strings: ['Student', 'Web-Developer', 'ML-Enthusiast','Tech-curious','Passionate'],
+  strings: ['Student', 'Web-Developer', 'Tech-curious','Passionate'],
   typeSpeed: 50,
   backSpeed: 20,
   backDelay: 900,
