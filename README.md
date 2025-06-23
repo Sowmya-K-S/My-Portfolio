@@ -13,4 +13,4 @@ Features:
 - Hover Effects: Interactive hover effects to make the browsing experience engaging.
 - Contact Form: A functional contact form for visitors to send messages directly from the website.
 
-- Hosted on : [https://sowmya12.me/](https://sowmya-k-s.github.io/My-Portfolio/)
+- Hosted on : [https://sowmya-k-s.github.io/My-Portfolio/](https://sowmya-k-s.github.io/My-Portfolio/)
